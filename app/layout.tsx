@@ -1,4 +1,5 @@
 import "./globals.css"
+import Navbar from "@/components/Navbar"
 
 export default function RootLayout({
   children,
@@ -12,8 +13,8 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
-        <header>HEADER placeholder</header>
+      <body className="bg-slate-50 text-slate-900 flex flex-col">
+        <Navbar />
         {children}
         <footer>FOOTER placeholder</footer>
       </body>
