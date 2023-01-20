@@ -1,11 +1,11 @@
-// import Image from "next/image"
-// import "./globals.css"
-import styles from "./page.module.css"
+// import styles from "./page.module.css"
+import GalleryCollection from "../components/GalleryCollection"
 
-export default function Home() {
+export default async function Home() {
   return (
-    <main className="h-full">
-      <p>Hello MAIN</p>
+    <main className="h-full bg-amber-300">
+      {/* @ts-expect-error Server Component */}
+      {<GalleryCollection />}
     </main>
   )
 }
