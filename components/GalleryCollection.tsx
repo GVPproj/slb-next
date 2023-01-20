@@ -5,11 +5,10 @@ export default async function GalleryCollection() {
   const galleriesArray = await photoData()
 
   return (
-    <section>
+    <section className="w-min">
       {galleriesArray.map((g: any) => (
         <Gallery key={g.id} gallery={g} />
       ))}
-      <p>Hello :) MAIN</p>
     </section>
   )
 }

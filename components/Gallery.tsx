@@ -1,5 +1,4 @@
 "use client"
-// import styles from "./Gallery.module.css"
 import Image from "next/image"
 import Masonry from "react-masonry-css"
 
@@ -9,7 +8,7 @@ export default function Gallery(props: any) {
   return (
     <Masonry
       breakpointCols={2}
-      className="flex justify-center bg-green-300 m-4 p-2 gap-2 w-max"
+      className="flex justify-center bg-green-300 m-4 gap-2 w-max mx-auto"
       columnClassName="bg-blue-300"
     >
       {gallery.node.image.map((pic: any) => (
@@ -17,8 +16,9 @@ export default function Gallery(props: any) {
           key={pic.mediaItemId}
           src={pic.mediaItemUrl}
           height={pic.mediaDetails.height}
-          width={400}
+          width={350}
           alt={pic.altText}
+          className="mb-2 mx-auto"
         />
       ))}
     </Masonry>
