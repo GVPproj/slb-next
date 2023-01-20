@@ -15,7 +15,8 @@ export default function RootLayout({
       <head />
       <body className="bg-slate-50 text-slate-900 flex flex-col min-h-full">
         <Navbar />
-        {children}
+        <div className="my-auto">{children}</div>
+
         <footer className="bg-blue-300">FOOTER placeholder</footer>
       </body>
     </html>

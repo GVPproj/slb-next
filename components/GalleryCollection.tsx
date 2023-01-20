@@ -5,7 +5,7 @@ export default async function GalleryCollection() {
   const galleriesArray = await photoData()
 
   return (
-    <section className="h-full">
+    <section>
       {galleriesArray.map((g: any) => (
         <Gallery key={g.id} gallery={g} />
       ))}
