@@ -8,7 +8,7 @@ export default function Gallery(props: any) {
   return (
     <Masonry
       breakpointCols={2}
-      className="flex justify-center bg-green-300 m-4 gap-2 w-max mx-auto"
+      className="flex justify-center bg-green-300 m-4 gap-4 w-max mx-auto"
       columnClassName="bg-blue-300"
     >
       {gallery.node.image.map((pic: any) => (
@@ -18,7 +18,7 @@ export default function Gallery(props: any) {
           height={pic.mediaDetails.height}
           width={350}
           alt={pic.altText}
-          className="mb-2 mx-auto"
+          className="mb-4 mx-auto"
         />
       ))}
     </Masonry>
