@@ -10,7 +10,6 @@ export default function Gallery(props: any) {
   }
 
   const gallery = props.gallery
-  console.log(gallery)
   return (
     <Masonry
       key={gallery.node.id}
