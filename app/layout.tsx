@@ -1,6 +1,11 @@
 import "./globals.css"
-import { Inconsolata } from "@next/font/google"
+import { Inconsolata, Work_Sans } from "@next/font/google"
 const inconsolata = Inconsolata({
+  subsets: ["latin"],
+  // default, can also use "swap" to ensure custom font always shows
+  display: "swap",
+})
+const workSans = Work_Sans({
   subsets: ["latin"],
   // default, can also use "swap" to ensure custom font always shows
   display: "swap",
@@ -14,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inconsolata.className}>
+    <html lang="en" className={workSans.className}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
