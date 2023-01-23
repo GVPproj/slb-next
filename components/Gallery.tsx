@@ -3,22 +3,29 @@ import Image from "next/image"
 import Masonry from "react-masonry-css"
 
 export default function Gallery(props: any) {
+  const breakpointColumnsObj = {
+    default: 2,
+    768: 2,
+    767: 1,
+  }
+
   const gallery = props.gallery
   console.log(gallery)
+
   return (
     <Masonry
-      breakpointCols={2}
-      className="flex justify-center bg-green-300 m-4 gap-4 w-max mx-auto"
-      columnClassName="bg-blue-300"
+      breakpointCols={breakpointColumnsObj}
+      className="flex relative gap-4 max-w-3xl"
+      columnClassName=""
     >
       {gallery.node.image.map((pic: any) => (
         <Image
           key={pic.mediaItemId}
           src={pic.mediaItemUrl}
           height={pic.mediaDetails.height}
-          width={350}
           alt={pic.altText}
-          className="mb-4 mx-auto"
+          width={pic.mediaDetails.width}
+          className="mb-4"
         />
       ))}
     </Masonry>

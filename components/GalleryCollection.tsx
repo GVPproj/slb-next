@@ -5,7 +5,7 @@ export default async function GalleryCollection() {
   const galleriesArray = await photoData()
 
   return (
-    <section className="w-min">
+    <section className="max-w-3xl mx-auto w-11/12 overflow-clip">
       {galleriesArray.map((g: any) => (
         <Gallery key={g.id} gallery={g} />
       ))}
