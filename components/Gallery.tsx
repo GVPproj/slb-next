@@ -11,11 +11,11 @@ export default function Gallery(props: any) {
 
   const gallery = props.gallery
   console.log(gallery)
-
   return (
     <Masonry
+      key={gallery.node.id}
       breakpointCols={breakpointColumnsObj}
-      className="flex relative gap-4 max-w-3xl"
+      className="flex gap-4 max-w-3xl"
       columnClassName=""
     >
       {gallery.node.image.map((pic: any) => (

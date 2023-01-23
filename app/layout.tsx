@@ -1,14 +1,13 @@
 import "./globals.css"
 import { Inconsolata } from "@next/font/google"
-
-// If loading a variable font, you don't need to specify the font weight
 const inconsolata = Inconsolata({
   subsets: ["latin"],
   // default, can also use "swap" to ensure custom font always shows
-  display: "optional",
+  display: "swap",
 })
 
 import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 export default function RootLayout({
   children,
 }: {
@@ -24,8 +23,7 @@ export default function RootLayout({
       <body className="bg-slate-100 text-slate-900 flex flex-col min-h-full">
         <Navbar />
         <div className="my-auto">{children}</div>
-
-        <footer className="bg-blue-300">FOOTER placeholder</footer>
+        <Footer />
       </body>
     </html>
   )

@@ -3,7 +3,7 @@ import GalleryCollection from "../components/GalleryCollection"
 
 export default async function Home() {
   return (
-    <main className="">
+    <main>
       {/* @ts-expect-error Server Component */}
       {<GalleryCollection />}
     </main>
