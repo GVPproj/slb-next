@@ -6,7 +6,8 @@ A portfolio site built with Next, Tailwind and Typescript.
 
 ### Frontend
 
-- focus ring showing
+- outline offset, customize focus ring
+- enlarge layout
 - tabs
 - sorting (await categories)
 - nav and sub-menu structure
