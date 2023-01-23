@@ -12,6 +12,7 @@ A portfolio site built with Next, Tailwind and Typescript.
 - nav and sub-menu structure
 - dark mode
 - proper types
+- image placeholders (lqip?)
 
 ### Backend
 
