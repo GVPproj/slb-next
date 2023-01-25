@@ -29,7 +29,7 @@ export default function Gallery(props: any) {
       <Masonry
         key={gallery.node.id}
         breakpointCols={breakpointColumnsObj}
-        className="flex gap-12 max-w-3xl"
+        className="flex gap-12 max-w-5xl"
         columnClassName=""
       >
         {images.map((pic: any, idx: number) => (
@@ -40,7 +40,7 @@ export default function Gallery(props: any) {
             height={pic.mediaDetails.height}
             alt={pic.altText}
             width={pic.mediaDetails.width}
-            className="mb-12   outline-offset-[-1px] cursor-pointer"
+            className="mb-12 outline-offset-[-1px] cursor-pointer"
             onClick={() => {
               lightboxRef.current?.openGallery(idx)
             }}

@@ -27,7 +27,9 @@ export default function RootLayout({
       <head />
       <body className="bg-slate-100 text-slate-900 flex flex-col min-h-full">
         <Navbar />
-        <div className="my-auto">{children}</div>
+        <main className="max-w-5xl mx-auto w-11/12 overflow-clip mb-16">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
