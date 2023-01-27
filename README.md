@@ -20,7 +20,8 @@ A portfolio site built with Next, Tailwind and Typescript.
 
 ### Backend
 
-- new query
+- use slug
+  - fix logos, re-upload
 - uploads
 - categories
 

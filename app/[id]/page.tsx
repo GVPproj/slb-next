@@ -20,6 +20,7 @@ const fetchGallery = async () => {
     edges {
       node {
         title
+        slug
         id
         ...GalleryFields
       }
