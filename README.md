@@ -20,8 +20,13 @@ A portfolio site built with Next, Tailwind and Typescript.
 
 ### Backend
 
+- new query
 - uploads
 - categories
+
+### Bugs
+
+- mobile layout shifts from 2 cols to 1 briefly
 
 ## Structure
 

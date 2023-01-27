@@ -1,14 +1,14 @@
 import "./globals.css"
-import { Inconsolata, Work_Sans } from "@next/font/google"
-const inconsolata = Inconsolata({
+import { Cormorant, Crimson_Text } from "@next/font/google"
+const cormorant = Cormorant({
   subsets: ["latin"],
   // default, can also use "swap" to ensure custom font always shows
   display: "swap",
 })
-const workSans = Work_Sans({
+const crimsonText = Crimson_Text({
+  weight: ["400", "600", "700"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
-  // default, can also use "swap" to ensure custom font always shows
-  display: "swap",
 })
 
 import Navbar from "@/components/Navbar"
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={workSans.className}>
+    <html lang="en" className={crimsonText.className}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head

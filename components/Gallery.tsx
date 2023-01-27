@@ -3,12 +3,9 @@ import { useRef } from "react"
 import Image from "next/image"
 import Masonry from "react-masonry-css"
 import LightGalleryComponent from "lightgallery/react"
-
-// import styles
 import "lightgallery/css/lightgallery.css"
 import "lightgallery/css/lg-zoom.css"
 import "lightgallery/css/lg-thumbnail.css"
-// import plugins if you need
 import lgThumbnail from "lightgallery/plugins/thumbnail"
 import lgZoom from "lightgallery/plugins/zoom"
 import { LightGallery } from "lightgallery/lightgallery"
@@ -16,11 +13,11 @@ import { LightGallery } from "lightgallery/lightgallery"
 export default function Gallery(props: any) {
   const lightboxRef = useRef<LightGallery | null>(null)
 
-  const breakpointColumnsObj = {
-    default: 2,
-    768: 2,
-    767: 1,
-  }
+  // const breakpointColumnsObj = {
+  //   default: 2,
+  //   768: 2,
+  //   767: 1,
+  // }
 
   const gallery = props.gallery
   const images = gallery.node.image
@@ -28,7 +25,7 @@ export default function Gallery(props: any) {
     <>
       <Masonry
         key={gallery.node.id}
-        breakpointCols={breakpointColumnsObj}
+        breakpointCols={{ default: 2, 800: 1 }}
         className="flex gap-12 max-w-5xl"
         columnClassName=""
       >
