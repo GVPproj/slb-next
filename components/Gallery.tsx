@@ -13,19 +13,14 @@ import { LightGallery } from "lightgallery/lightgallery"
 export default function Gallery(props: any) {
   const lightboxRef = useRef<LightGallery | null>(null)
 
-  // const breakpointColumnsObj = {
-  //   default: 2,
-  //   768: 2,
-  //   767: 1,
-  // }
-
   const gallery = props.gallery
+
   const images = gallery.node.image
   return (
     <>
       <Masonry
         key={gallery.node.id}
-        breakpointCols={{ default: 2, 800: 1 }}
+        breakpointCols={{ default: 2, 767: 1 }}
         className="flex gap-12 max-w-5xl"
         columnClassName=""
       >
