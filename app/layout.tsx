@@ -25,9 +25,9 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="bg-slate-100 text-slate-900 flex flex-col min-h-full">
+      <body className="bg-slate-100 text-slate-900 flex flex-col min-h-screen">
         <Navbar />
-        <main className="max-w-5xl mx-auto w-11/12 overflow-clip mb-16">
+        <main className="max-w-5xl mx-auto w-11/12 overflow-clip mb-16 flex-1">
           {children}
         </main>
         <Footer />

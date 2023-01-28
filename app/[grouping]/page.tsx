@@ -1,8 +1,8 @@
-import Gallery from "../../components/Gallery"
+import Link from "next/link"
 
 type PageProps = {
   params: {
-    id: string
+    grouping: string
   }
 }
 
@@ -19,9 +19,18 @@ const fetchGallery = async () => {
   galleries(first: 100) {
     edges {
       node {
+        id
         title
         slug
-        id
+        groupings {
+          edges {
+            node {
+              id
+              name
+              slug
+            }
+          }
+        }
         ...GalleryFields
       }
     }
@@ -57,22 +66,22 @@ fragment GalleryFields on Gallery {
   return await galleries
 }
 
-async function GalleryPage({ params: { id } }: PageProps) {
+async function GroupingPage({ params: { grouping } }: PageProps) {
   const fetchedGalleries = await fetchGallery()
 
   return (
     <>
       {fetchedGalleries.map((gal: any) => {
-        if (
-          gal.node.id.substring(0, gal.node.id.length - 2) ===
-          id.substring(0, id.length - 6)
-        ) {
-          console.log(gal.node.title)
-          return <Gallery key={id} gallery={gal} />
+        if (gal.node.groupings.edges[0].node.slug === grouping) {
+          return (
+            <Link key={gal.node.id} href={grouping + "/" + gal.node.slug}>
+              {gal.node.title}
+            </Link>
+          )
         }
       })}
     </>
   )
 }
 
-export default GalleryPage
+export default GroupingPage
