@@ -6,6 +6,8 @@ A portfolio site built with Next, Tailwind and Typescript.
 
 ### Frontend
 
+- drawing grouping
+- video embed components
 - outline offset, customize focus ring
 - enlarge layout
 - sorting (await categories)

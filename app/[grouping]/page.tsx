@@ -68,19 +68,22 @@ fragment GalleryFields on Gallery {
 
 async function GroupingPage({ params: { grouping } }: PageProps) {
   const fetchedGalleries = await fetchGallery()
-
   return (
-    <>
+    <section className="grid grid-cols-5">
       {fetchedGalleries.map((gal: any) => {
         if (gal.node.groupings.edges[0].node.slug === grouping) {
           return (
-            <Link key={gal.node.id} href={grouping + "/" + gal.node.slug}>
+            <Link
+              className="text-center"
+              key={gal.node.id}
+              href={grouping + "/" + gal.node.slug}
+            >
               {gal.node.title}
             </Link>
           )
         }
       })}
-    </>
+    </section>
   )
 }
 
