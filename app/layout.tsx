@@ -1,10 +1,10 @@
 import "./globals.css"
-import { Cormorant, Crimson_Text } from "@next/font/google"
-const cormorant = Cormorant({
-  subsets: ["latin"],
-  // default, can also use "swap" to ensure custom font always shows
-  display: "swap",
-})
+import { Crimson_Text } from "@next/font/google"
+// const cormorant = Cormorant({
+//   subsets: ["latin"],
+//   // default, can also use "swap" to ensure custom font always shows
+//   display: "swap",
+// })
 const crimsonText = Crimson_Text({
   weight: ["400", "600", "700"],
   style: ["normal", "italic"],
