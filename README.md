@@ -6,17 +6,15 @@ A portfolio site built with Next, Tailwind and Typescript.
 
 ### Frontend
 
-- drawing grouping
 - loading spinner
 - video embed components
 - outline offset, customize focus ring
 - enlarge layout
 - sorting (await categories)
   - daisy ui responsive navbar?
-  - mantine header with tabs?
 - tailwind typography?
 - nav and sub-menu structure
-- dark mode
+- dark mode?
 - proper types
 - further image optimize
 - image placeholders (lqip?)

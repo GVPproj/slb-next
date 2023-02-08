@@ -1,4 +1,5 @@
 import Gallery from "../../../components/Gallery"
+export const revalidate = 60
 
 type PageProps = {
   params: {
