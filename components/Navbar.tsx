@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Dropdown from "./Dropdown.jsx"
 
 export default function Navbar() {
   return (
@@ -14,7 +15,7 @@ export default function Navbar() {
           <Link href="/about">about</Link>
         </div>
         <div className="md:hidden">
-          <p>=</p>
+          <Dropdown />
         </div>
       </nav>
     </header>

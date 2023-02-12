@@ -53,6 +53,7 @@ export default function Gallery(props: any) {
         speed={500}
         plugins={[lgThumbnail, lgZoom]}
         dynamic
+        download={false}
         dynamicEl={images.map((photo: any) => ({
           src: photo.mediaItemUrl,
           thumb: photo.mediaDetails.sizes[0].sourceUrl,
