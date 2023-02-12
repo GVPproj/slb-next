@@ -7,11 +7,14 @@ export default function Navbar() {
         <Link className="text-3xl tracking-widest" href="/">
           sophia burke
         </Link>
-        <div className="flex gap-6 items-end">
+        <div className="hidden md:flex gap-6 items-end">
           <Link href="/works">works</Link>
           <Link href="/photography">photography</Link>
           <Link href="/design">design</Link>
           <Link href="/about">about</Link>
+        </div>
+        <div className="md:hidden">
+          <p>=</p>
         </div>
       </nav>
     </header>
