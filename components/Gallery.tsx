@@ -18,6 +18,8 @@ export default function Gallery(props: any) {
   const images = gallery.node.image
   return (
     <>
+      <h1 className="text-xl mb-12">{gallery.node.title}</h1>
+      <p className="mb-12">Description goes here...</p>
       <Masonry
         key={gallery.node.id}
         breakpointCols={{ default: 2, 767: 1 }}
