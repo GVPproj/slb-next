@@ -20,6 +20,7 @@ const fetchGallery = async () => {
   galleries(first: 100) {
     edges {
       node {
+        description
         id
         title
         slug
@@ -71,10 +72,17 @@ async function GalleryPage({ params: { slug } }: PageProps) {
 
   return (
     <>
+    
       {fetchedGalleries.map((gal: any) => {
         if (gal.node.slug === slug) {
-          console.log(gal.node.title)
-          return <Gallery key={gal.node.id} gallery={gal} />
+          return (
+            <>
+            <h1 className="text-xl mb-12">{gal.node.title}</h1>
+            <p className="mb-12">{gal.node.description}</p>
+
+            <Gallery key={gal.node.id} gallery={gal} desc={gal.node.description}/>
+            </>
+          )
         }
       })}
     </>
