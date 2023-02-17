@@ -1,4 +1,5 @@
 import Link from "next/link"
+export const revalidate = 60
 
 const fetchGroupings = async () => {
   const results = await fetch("https://slb.sitesbygvp.com/graphql", {
@@ -14,6 +15,7 @@ const fetchGroupings = async () => {
           nodes {
             slug
             id
+            name
           }
         }
       }`,
@@ -27,9 +29,9 @@ const fetchGroupings = async () => {
 
 async function Archives() {
   const groupings = await fetchGroupings()
-  return <section className="flex flex-col">
+  return <section className="flex flex-col gap-4 items-start">
   {groupings.map((grouping: any)=>{
-    return <Link href={"archives/" + grouping.slug} key={grouping.id}>{grouping.slug}</Link>
+    return <Link href={"archives/" + grouping.slug} key={grouping.id}>{grouping.name}</Link>
   })}
   </section> 
 }

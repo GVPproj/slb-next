@@ -70,12 +70,12 @@ fragment GalleryFields on Gallery {
 async function GroupingPage({ params: { grouping } }: PageProps) {
   const fetchedGalleries = await fetchGallery()
   return (
-    <section className="flex justify-between flex-wrap gap-x-36 gap-y-8">
+    <section className="flex flex-col gap-4 items-start">
       {fetchedGalleries.map((gal: any) => {
         if (gal.node.groupings.edges[0].node.slug === grouping) {
           return (
             <Link
-              className="text-center"
+              className=""
               key={gal.node.id}
               href={"archives/" + grouping + "/" + gal.node.slug}
             >
