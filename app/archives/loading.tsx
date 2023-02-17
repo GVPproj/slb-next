@@ -1,5 +1,11 @@
 function loading() {
-  return <div className="text-center">loading...</div>
+  return (
+
+  <div className="flex justify-center align-middle">
+    <div className="lds-dual-ring"></div>
+  </div>
+  )
+  
 }
 
 export default loading
