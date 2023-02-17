@@ -69,9 +69,10 @@ fragment GalleryFields on Gallery {
 
 async function GroupingPage({ params: { grouping } }: PageProps) {
   const fetchedGalleries = await fetchGallery()
+  const sortedGalleries = await fetchedGalleries.sort((a: any, b: any) => a.node.slug.localeCompare(b.node.slug))
   return (
     <section className="flex flex-col gap-4 items-start">
-      {fetchedGalleries.map((gal: any) => {
+      {sortedGalleries.map((gal: any) => {
         if (gal.node.groupings.edges[0].node.slug === grouping) {
           return (
             <Link

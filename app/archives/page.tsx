@@ -29,8 +29,9 @@ const fetchGroupings = async () => {
 
 async function Archives() {
   const groupings = await fetchGroupings()
+  const sortedGroupings = await groupings.sort((a: any, b: any) => a.name.localeCompare(b.name))
   return <section className="flex flex-col gap-4 items-start">
-  {groupings.map((grouping: any)=>{
+  {sortedGroupings.map((grouping: any)=>{
     return <Link href={"archives/" + grouping.slug} key={grouping.id}>{grouping.name}</Link>
   })}
   </section> 
