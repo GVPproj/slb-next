@@ -8,15 +8,14 @@ export default function Navbar() {
         <Link className="text-3xl tracking-widest" href="/">
           sophia burke
         </Link>
-        <div className="hidden md:flex gap-6 items-end">
-          <Link href="/works">works</Link>
-          <Link href="/photography">photography</Link>
-          <Link href="/design">design</Link>
+        <div className="flex gap-6 items-end">
+          <Link href="/">selected works</Link>
+          <Link href="/archives">archives</Link>
           <Link href="/about">about</Link>
         </div>
-        <div className="md:hidden">
+        {/* <div className="md:hidden">
           <Dropdown />
-        </div>
+        </div> */}
       </nav>
     </header>
   )

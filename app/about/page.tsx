@@ -1,6 +1,6 @@
 function About() {
   return (
-    <>
+    <div>
       <p>
         <em>
           <b>BIO</b>
@@ -146,7 +146,7 @@ function About() {
           MATTERS OF THE HEART, WONDEREUR , No.44 2013
         </a>
       </p>
-    </>
+    </div>
   )
 }
 export default About

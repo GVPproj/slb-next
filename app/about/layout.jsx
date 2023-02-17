@@ -3,9 +3,10 @@ import artistHeadshot from "../../public/Sophia_May_2016_BW.jpg"
 
 export default function Layout({ children }) {
   return (
-    <div className="">
+    <div className="flex flex-col gap-12">
       <Image
-        className="max-h-96 w-fit mx-auto"
+        width="768"
+        className="mx-auto"
         src={artistHeadshot}
         alt="Headshot of Artis Sophia Burke in black and white"
       />
