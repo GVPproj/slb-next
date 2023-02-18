@@ -6,6 +6,7 @@ const nextConfig = {
 
   images: {
     domains: ["sitesbygvp.com", "slb.sitesbygvp.com"],
+    minimumCacheTTL: 31536000,
   },
 }
 
