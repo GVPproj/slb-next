@@ -6,12 +6,15 @@ export default function Dropdown() {
   const mobileLinkClassNames = ` py-4 text-lg `
 
   return (
-    <Menu as="div" className="relative flex flex-col gap-4 items-end z-50">
+    <Menu
+      as="div"
+      className=" ring-slate-200 relative flex flex-col gap-4 items-end z-50"
+    >
       <Menu.Button
         onClick={() => {
           setOpen((prev) => !prev)
         }}
-        className="ring-inherit"
+        className="ring-slate-200"
       >
         {!open && (
           <svg
@@ -46,7 +49,7 @@ export default function Dropdown() {
           </svg>
         )}
       </Menu.Button>
-      <Menu.Items as="div" className="ring-inherit flex flex-col items-end ">
+      <Menu.Items as="div" className="ring-slate-200 flex flex-col items-end ">
         <Menu.Item>
           {({ active }) => (
             <a
