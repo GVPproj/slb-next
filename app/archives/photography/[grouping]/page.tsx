@@ -58,7 +58,7 @@ async function GroupingPage({ params: { grouping } }: PageProps) {
             <Link
               className=""
               key={gal.node.id}
-              href={"archives/" + grouping + "/" + gal.node.slug}
+              href={"/archives/photography/" + grouping + "/" + gal.node.slug}
             >
               {gal.node.title}
             </Link>

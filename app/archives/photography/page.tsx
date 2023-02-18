@@ -10,46 +10,49 @@ const fetchGroupings = async () => {
     },
 
     body: JSON.stringify({
-      query: `query groupings {
+      query: `{
   groupings {
     nodes {
-      slug
-      id
       name
+      slug
       ancestors {
         nodes {
           name
+          slug
         }
       }
+      
     }
   }
-}`,
+}
+`,
     }),
   })
   const res = await results.json()
   const groupings = await res.data.groupings.nodes
-
   return await groupings
 }
 
-async function Archives() {
+async function Photography() {
   const groupings = await fetchGroupings()
-  const sortedGroupings = await groupings.sort((a: any, b: any) =>
-    a.name.localeCompare(b.name)
+  const photoGroupings = await groupings.filter(
+    (grouping: any) => grouping.ancestors
   )
+  console.log(photoGroupings)
   return (
     <section className="flex flex-col gap-4 items-start">
-      {sortedGroupings.map((grouping: any) => {
-        if (!grouping.ancestors) {
-          return (
-            <Link href={"archives/" + grouping.slug} key={grouping.id}>
-              {grouping.name}
-            </Link>
-          )
-        }
+      {photoGroupings.map((grouping: any) => {
+        return (
+          <Link
+            href={"/archives/photography/" + grouping.slug}
+            key={grouping.id}
+          >
+            {grouping.name}
+          </Link>
+        )
       })}
     </section>
   )
 }
 
-export default Archives
+export default Photography
