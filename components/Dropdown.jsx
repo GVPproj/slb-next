@@ -11,7 +11,7 @@ export default function Dropdown() {
         onClick={() => {
           setOpen((prev) => !prev)
         }}
-        className=""
+        className="ring-inherit"
       >
         {!open && (
           <svg
@@ -46,7 +46,7 @@ export default function Dropdown() {
           </svg>
         )}
       </Menu.Button>
-      <Menu.Items as="div" className=" flex flex-col items-end ">
+      <Menu.Items as="div" className="ring-inherit flex flex-col items-end ">
         <Menu.Item>
           {({ active }) => (
             <a

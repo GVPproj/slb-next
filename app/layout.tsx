@@ -22,7 +22,7 @@ export default function RootLayout({
       <head />
       <body className="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
         <Navbar />
-        <main className="max-w-5xl mx-auto w-11/12 overflow-clip mb-16 flex-1">
+        <main className="max-w-5xl mx-auto w-11/12 overflow-clip mt-28 mb-16 flex-1">
           {children}
         </main>
         <Footer />
