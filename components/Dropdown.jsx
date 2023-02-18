@@ -8,13 +8,13 @@ export default function Dropdown() {
   return (
     <Menu
       as="div"
-      className="outline-none ring-slate-200 relative flex flex-col gap-4 items-end z-50"
+      className="outline-none relative flex flex-col gap-4 items-end z-50"
     >
       <Menu.Button
         onClick={() => {
           setOpen((prev) => !prev)
         }}
-        className="ring-slate-200"
+        className="outline-none outline-dashed focus:outline-slate-200 "
       >
         {!open && (
           <svg
@@ -51,7 +51,7 @@ export default function Dropdown() {
       </Menu.Button>
       <Menu.Items
         as="div"
-        className="outline-none ring-slate-200 flex flex-col items-end "
+        className="outline-none outline-dashed focus:outline-slate-200 pr-1 pl-12 flex flex-col items-end "
       >
         <Menu.Item>
           {({ active }) => (

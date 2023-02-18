@@ -9,7 +9,10 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 z-50 w-screen backdrop-blur-md bg-slate-50/70 mb-16">
       <nav className=" max-w-5xl mx-auto w-11/12 my-3 flex justify-between">
-        <Link className="text-3xl tracking-widest self-start" href="/">
+        <Link
+          className="text-3xl tracking-widest self-start outline-none outline-dashed focus:outline-slate-200 "
+          href="/"
+        >
           sophia burke
         </Link>
 
