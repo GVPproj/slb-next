@@ -1,11 +1,12 @@
-import { Menu } from "@headlessui/react"
+import { Fragment, Menu } from "@headlessui/react"
 import { useState } from "react"
 
 export default function Dropdown() {
   const [open, setOpen] = useState(false)
+  const mobileLinkClassNames = ` py-4 text-lg `
 
   return (
-    <Menu as="div" className="flex flex-col gap-4 items-end">
+    <Menu as="div" className="relative flex flex-col gap-4 items-end z-50">
       <Menu.Button
         onClick={() => {
           setOpen((prev) => !prev)
@@ -44,10 +45,13 @@ export default function Dropdown() {
           </svg>
         )}
       </Menu.Button>
-      <Menu.Items as="div" className="flex flex-col items-end">
+      <Menu.Items as="div" className=" flex flex-col items-end ">
         <Menu.Item>
           {({ active }) => (
-            <a className={`py-4 text-lg ${active && "underline"}`} href="/">
+            <a
+              className={`${mobileLinkClassNames} ${active && "underline"}`}
+              href="/"
+            >
               selected works
             </a>
           )}
@@ -55,7 +59,7 @@ export default function Dropdown() {
         <Menu.Item>
           {({ active }) => (
             <a
-              className={`py-4 text-lg ${active && "underline"}`}
+              className={`${mobileLinkClassNames} ${active && "underline"}`}
               href="/archives"
             >
               archives
@@ -65,7 +69,7 @@ export default function Dropdown() {
         <Menu.Item>
           {({ active }) => (
             <a
-              className={`py-4 text-lg ${active && "underline"}`}
+              className={`${mobileLinkClassNames} ${active && "underline"}`}
               href="/about"
             >
               about
