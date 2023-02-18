@@ -8,7 +8,7 @@ export default function Dropdown() {
   return (
     <Menu
       as="div"
-      className=" ring-slate-200 relative flex flex-col gap-4 items-end z-50"
+      className="outline-none ring-slate-200 relative flex flex-col gap-4 items-end z-50"
     >
       <Menu.Button
         onClick={() => {
@@ -49,7 +49,10 @@ export default function Dropdown() {
           </svg>
         )}
       </Menu.Button>
-      <Menu.Items as="div" className="ring-slate-200 flex flex-col items-end ">
+      <Menu.Items
+        as="div"
+        className="outline-none ring-slate-200 flex flex-col items-end "
+      >
         <Menu.Item>
           {({ active }) => (
             <a
