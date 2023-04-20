@@ -1,4 +1,4 @@
-import { Fragment, Menu } from "@headlessui/react"
+import { Menu } from "@headlessui/react"
 import { useState } from "react"
 
 export default function Dropdown() {
@@ -53,16 +53,6 @@ export default function Dropdown() {
         as="div"
         className="outline-none outline-dashed focus:outline-slate-200 pr-1 pl-12 flex flex-col items-end "
       >
-        <Menu.Item>
-          {({ active }) => (
-            <a
-              className={`${mobileLinkClassNames} ${active && "underline"}`}
-              href="/"
-            >
-              selected works
-            </a>
-          )}
-        </Menu.Item>
         <Menu.Item>
           {({ active }) => (
             <a
